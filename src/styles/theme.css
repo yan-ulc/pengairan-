@@ -1,0 +1,11 @@
+/* styles/theme.css */
+/* Utility ringkas untuk input & tombol */
+.input{
+  @apply w-full rounded-md border border-slate-300 bg-white px-3 py-2 outline-none focus:border-green-500 focus:ring-2 focus:ring-green-200;
+}
+.btn-primary{
+  @apply inline-flex items-center rounded-md bg-green-600 px-4 py-2 text-white hover:bg-green-700 transition;
+}
+.file\:btn::file-selector-button{
+  @apply rounded-md bg-slate-200 px-3 py-1.5 text-sm hover:bg-slate-300 cursor-pointer;
+}

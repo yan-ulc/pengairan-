@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+/* ================================
+   ========== Base Reset ==========
+================================= */
+
+@layer base {
+  html,
+  body {
+    @apply antialiased text-slate-800 bg-slate-50;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold text-slate-800;
+  }
+
+  a {
+    @apply text-green-600 hover:text-green-700 transition;
+  }
+}
+
+/* ================================
+   ====== Custom Components =======
+================================= */
+
+@layer components {
+  .input {
+    @apply w-full rounded-md border border-slate-300 bg-white px-3 py-2 outline-none focus:border-green-500 focus:ring-2 focus:ring-green-200;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center rounded-md bg-green-600 px-4 py-2 text-white hover:bg-green-700 transition;
+  }
+
+  .file\:btn::file-selector-button {
+    @apply rounded-md bg-slate-200 px-3 py-1.5 text-sm hover:bg-slate-300 cursor-pointer;
+  }
+}
+
+/* ================================
+   ===== Custom Utilities =========
+================================= */
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-green-500 via-emerald-400 to-lime-400 bg-clip-text text-transparent;
+  }
+
+  .card {
+    @apply rounded-xl border border-slate-200 bg-white p-5 shadow-sm hover:shadow-md transition;
+  }
+}
